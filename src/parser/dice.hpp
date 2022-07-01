@@ -9,12 +9,12 @@
 #include <parser/prebuilt/dice_roller/dice.hpp>
 #include <parser/tokenizer/regex_tokenizer.hpp>
 
-namespace ratl
+namespace gpt
 {
     using dice_parser
         = parser<tokenizer::regex_tokenizer, arithmetic::root, typename math_parser::nodes, dice_roller::dice>;
 
     using dice_tree = decltype(std::declval<dice_parser>()(std::declval<std::string>()));
-}// namespace ratl
+}// namespace gpt
 
 #endif// PARSER_DICE_HPP

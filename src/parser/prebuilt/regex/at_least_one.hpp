@@ -6,12 +6,12 @@
 
 #include <parser/parse_node.hpp>
 
-namespace ratl::regex
+namespace gpt::regex
 {
-    class at_least_one : public ratl::parse_node<bool>
+    class at_least_one : public gpt::parse_node<bool>
     {
         private:
-            using node = ratl::parse_node<bool>;
+            using node = gpt::parse_node<bool>;
 
         public:
             static const inline std::string identifier     = "+";
@@ -40,6 +40,6 @@ namespace ratl::regex
                 return matched > 0;
             }
     };
-}// namespace ratl::regex
+}// namespace gpt::regex
 
 #endif// PARSER_PREBUILT_REGEX_AT_LEAST_ONE_HPP

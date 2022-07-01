@@ -5,12 +5,12 @@
 
 #include <parser/parse_node.hpp>
 
-namespace ratl::regex
+namespace gpt::regex
 {
-    class non_digit : public ratl::parse_node<bool>
+    class non_digit : public gpt::parse_node<bool>
     {
         private:
-            using node = ratl::parse_node<bool>;
+            using node = gpt::parse_node<bool>;
 
         public:
             static const inline std::string identifier = "\\D";
@@ -34,6 +34,6 @@ namespace ratl::regex
                 return (to_match < '0' || to_match > '9');
             }
     };
-}// namespace ratl::regex
+}// namespace gpt::regex
 
 #endif// PARSER_PREBUILT_REGEX_NON_DIGIT_HPP

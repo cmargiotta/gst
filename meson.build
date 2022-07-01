@@ -1,4 +1,4 @@
-project('ratl', 'cpp', default_options: ['cpp_std=c++20'])
+project('gpt', 'cpp', default_options: ['cpp_std=c++20'])
 
 if get_option('buildtype') == 'debug'
   add_project_arguments('-O0', '-g3',  language : 'cpp')

@@ -27,17 +27,17 @@ MAKE_EXISTENCE_VERIFIER(b)
 
 TEST_CASE("Function traits work correctly", "[traits]")
 {
-    REQUIRE(ratl::with_b<A>);
-    REQUIRE(ratl::with_b<B>);
-    REQUIRE(!ratl::with_b<C>);
+    REQUIRE(gpt::with_b<A>);
+    REQUIRE(gpt::with_b<B>);
+    REQUIRE(!gpt::with_b<C>);
 
-    REQUIRE(ratl::iterator<A*>);
-    REQUIRE(!ratl::iterator<A>);
+    REQUIRE(gpt::iterator<A*>);
+    REQUIRE(!gpt::iterator<A>);
 }
 
 TEST_CASE("Iterator trait works correctly", "[traits]")
 {
-    REQUIRE(ratl::iterator<std::vector<int>::iterator>);
-    REQUIRE(ratl::iterator<int*>);
-    REQUIRE(!ratl::iterator<int>);
+    REQUIRE(gpt::iterator<std::vector<int>::iterator>);
+    REQUIRE(gpt::iterator<int*>);
+    REQUIRE(!gpt::iterator<int>);
 }

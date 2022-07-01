@@ -6,7 +6,7 @@
 
 #include <parser/prebuilt/math_function/base_node.hpp>
 
-namespace ratl::math_function
+namespace gpt::math_function
 {
     class unknown : public base_node
     {
@@ -29,12 +29,12 @@ namespace ratl::math_function
             {
             }
 
-            inline ratl::math::fraction<int>
-                compute(std::unordered_map<std::string, ratl::math::fraction<int>>& input) override
+            inline gpt::math::fraction<int>
+                compute(std::unordered_map<std::string, gpt::math::fraction<int>>& input) override
             {
                 return input.at(name);
             }
     };
-}// namespace ratl::math_function
+}// namespace gpt::math_function
 
 #endif// PARSER_PREBUILT_MATH_FUNCTION_UNKNOWN_HPP

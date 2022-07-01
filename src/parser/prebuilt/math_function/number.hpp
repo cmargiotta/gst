@@ -7,14 +7,14 @@
 
 #include <parser/prebuilt/math_function/base_node.hpp>
 
-namespace ratl::math_function
+namespace gpt::math_function
 {
     class number : public base_node
     {
         private:
             using node = base_node::node;
 
-            const ratl::math::fraction<int> value;
+            const gpt::math::fraction<int> value;
 
         public:
             static const inline std::string identifier = "\\-?[0-9]+";
@@ -26,8 +26,8 @@ namespace ratl::math_function
             {
             }
 
-            inline ratl::math::fraction<int>
-                compute(std::unordered_map<std::string, ratl::math::fraction<int>>&) override
+            inline gpt::math::fraction<int>
+                compute(std::unordered_map<std::string, gpt::math::fraction<int>>&) override
             {
                 return value;
             }
@@ -37,6 +37,6 @@ namespace ratl::math_function
                 return static_cast<std::string>(value);
             }
     };
-}// namespace ratl::math_function
+}// namespace gpt::math_function
 
 #endif// PARSER_PREBUILT_MATH_FUNCTION_NUMBER_HPP

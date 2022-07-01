@@ -4,8 +4,8 @@
 
 TEST_CASE("Fractions operations")
 {
-    ratl::math::fraction f1(1, 2);
-    ratl::math::fraction f2(2, 4);
+    gpt::math::fraction f1(1, 2);
+    gpt::math::fraction f2(2, 4);
 
     auto f_sum = f1 + f2;
     auto f_sub = f1 - f2;

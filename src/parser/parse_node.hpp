@@ -10,7 +10,7 @@
 #include <type_traits>
 #include <vector>
 
-namespace ratl
+namespace gpt
 {
     namespace _private_
     {
@@ -76,9 +76,9 @@ namespace ratl
             {
             }
 
-            parse_node(const parse_node& other)     = default;
-            parse_node(parse_node&& other) noexcept = default;
-            parse_node& operator=(const parse_node& other) = default;
+            parse_node(const parse_node& other)                = default;
+            parse_node(parse_node&& other) noexcept            = default;
+            parse_node& operator=(const parse_node& other)     = default;
             parse_node& operator=(parse_node&& other) noexcept = default;
 
             virtual ~parse_node() = default;
@@ -187,6 +187,6 @@ namespace ratl
             }
     };
 
-}// namespace ratl
+}// namespace gpt
 
 #endif// PARSE_TREE_PARSE_NODE_HPP

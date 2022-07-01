@@ -6,7 +6,7 @@
 
 #include <parser/prebuilt/math_function/base_node.hpp>
 
-namespace ratl::math_function
+namespace gpt::math_function
 {
     class par_close : public base_node
     {
@@ -28,12 +28,12 @@ namespace ratl::math_function
             {
             }
 
-            inline ratl::math::fraction<int>
-                compute(std::unordered_map<std::string, ratl::math::fraction<int>>&) override
+            inline gpt::math::fraction<int>
+                compute(std::unordered_map<std::string, gpt::math::fraction<int>>&) override
             {
-                return ratl::math::fraction<int>();
+                return gpt::math::fraction<int>();
             }
     };
-}// namespace ratl::math_function
+}// namespace gpt::math_function
 
 #endif// PARSER_PREBUILT_MATH_FUNCTION_PAR_CLOSE_HPP

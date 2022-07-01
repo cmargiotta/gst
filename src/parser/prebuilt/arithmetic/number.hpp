@@ -6,12 +6,12 @@
 
 #include <parser/parse_node.hpp>
 
-namespace ratl::arithmetic
+namespace gpt::arithmetic
 {
-    class number : public ratl::parse_node<int, void>
+    class number : public gpt::parse_node<int, void>
     {
         private:
-            using node = ratl::parse_node<int, void>;
+            using node = gpt::parse_node<int, void>;
             const int value;
 
         public:
@@ -34,6 +34,6 @@ namespace ratl::arithmetic
                 return std::to_string(value);
             }
     };
-}// namespace ratl::arithmetic
+}// namespace gpt::arithmetic
 
 #endif// PARSER_PREBUILT_ARITHMETIC_NUMBER_HPP

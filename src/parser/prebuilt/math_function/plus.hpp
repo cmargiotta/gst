@@ -7,7 +7,7 @@
 
 #include <parser/prebuilt/math_function/base_node.hpp>
 
-namespace ratl::math_function
+namespace gpt::math_function
 {
     class plus : public base_node
     {
@@ -19,7 +19,7 @@ namespace ratl::math_function
                 return "+";
             }
 
-            ratl::math::fraction<int> pre_computed_result;
+            gpt::math::fraction<int> pre_computed_result;
 
         public:
             static const inline std::string identifier     = "\\+";
@@ -80,10 +80,10 @@ namespace ratl::math_function
                 return ss.str();
             }
 
-            inline ratl::math::fraction<int>
-                compute(std::unordered_map<std::string, ratl::math::fraction<int>>& input) override
+            inline gpt::math::fraction<int>
+                compute(std::unordered_map<std::string, gpt::math::fraction<int>>& input) override
             {
-                ratl::math::fraction<int> result;
+                gpt::math::fraction<int> result;
 
                 for (auto& child: children)
                 {
@@ -95,6 +95,6 @@ namespace ratl::math_function
                 return result;
             }
     };
-}// namespace ratl::math_function
+}// namespace gpt::math_function
 
 #endif// PARSER_PREBUILT_MATH_FUNCTION_PLUS_HPP

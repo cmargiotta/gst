@@ -15,7 +15,7 @@ SCENARIO("Regex parse tree")
 {
     GIVEN("A regex parser and an expression tree")
     {
-        ratl::regex_parser parser_;
+        gpt::regex_parser parser_;
 
         std::string parse_expr("1*2+a?[\\dA]*");
         auto        tree = parser_(parse_expr);
@@ -69,7 +69,7 @@ SCENARIO("Regex parse tree")
         }
         AND_WHEN("Two trees are merged")
         {
-            ratl::regex_parser parser_;
+            gpt::regex_parser parser_;
 
             std::string parse_expr("1*2+a?[\\dA]*");
             auto        tree = parser_(parse_expr);
@@ -97,7 +97,7 @@ SCENARIO("Math parse tree")
 {
     GIVEN("A regex parser and an expression tree")
     {
-        ratl::math_parser parser_;
+        gpt::math_parser parser_;
 
         WHEN("It is asked to compute")
         {
@@ -126,7 +126,7 @@ SCENARIO("Math function parse tree")
 {
     GIVEN("A regex parser and an expression tree")
     {
-        ratl::math_function_parser parser_;
+        gpt::math_function_parser parser_;
 
         WHEN("It is asked to compute")
         {
@@ -134,9 +134,9 @@ SCENARIO("Math function parse tree")
             {
                 std::string parse_expr("12/2+2+5xy");
                 auto        tree = parser_(parse_expr);
-                std::unordered_map<std::string, ratl::math::fraction<int>> unknowns;
-                unknowns["x"] = ratl::math::fraction<int>(1, 2);
-                unknowns["y"] = ratl::math::fraction<int>(2, 1);
+                std::unordered_map<std::string, gpt::math::fraction<int>> unknowns;
+                unknowns["x"] = gpt::math::fraction<int>(1, 2);
+                unknowns["y"] = gpt::math::fraction<int>(2, 1);
 
                 REQUIRE(tree->to_string() == "13xy");
                 auto result = tree->compute(unknowns);
@@ -151,7 +151,7 @@ SCENARIO("Dice parse tree")
 {
     GIVEN("A regex parser and an expression tree")
     {
-        ratl::dice_parser parser_;
+        gpt::dice_parser parser_;
 
         std::string parse_expr("10d6");
         auto        tree = parser_(parse_expr);

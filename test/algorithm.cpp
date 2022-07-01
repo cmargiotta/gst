@@ -16,7 +16,7 @@ SCENARIO("Lazy transform of a vector")
 
         WHEN("The lazy transform operation is requested")
         {
-            auto lazy = ratl::lazy_transform(v.begin(), v.end(), transform);
+            auto lazy = gpt::lazy_transform(v.begin(), v.end(), transform);
 
             THEN("The operation is applied only when the lazy iterator is accessed")
             {

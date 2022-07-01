@@ -20,7 +20,7 @@
 #include <parser/prebuilt/regex/star.hpp>
 #include <parser/tokenizer/exact_tokenizer.hpp>
 
-namespace ratl
+namespace gpt
 {
     using regex_parser = parser<tokenizer::exact_string_tokenizer,
                                 regex::root,
@@ -39,6 +39,6 @@ namespace ratl
                                 regex::alternation>;
 
     using regex_tree = decltype(std::declval<regex_parser>()(std::declval<std::string>()));
-}// namespace ratl
+}// namespace gpt
 
 #endif// PARSER_REGEX_HPP

@@ -9,7 +9,7 @@
 #include <type_traits>
 #include <utility>
 
-namespace ratl::math
+namespace gpt::math
 {
     template<std::signed_integral T = int>
     class fraction
@@ -222,6 +222,6 @@ namespace ratl::math
                 return ss.str();
             }
     };
-}// namespace ratl::math
+}// namespace gpt::math
 
 #endif// MATH_FRACTION_HPP

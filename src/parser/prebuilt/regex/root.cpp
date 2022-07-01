@@ -2,9 +2,9 @@
 #include <parser/prebuilt/regex/root.hpp>
 #include <parser/prebuilt/regex/round_par_open.hpp>
 
-using ratl::regex::alternation;
-using ratl::regex::root;
-using ratl::regex::round_par_open;
+using gpt::regex::alternation;
+using gpt::regex::root;
+using gpt::regex::round_par_open;
 
 void root::merge(std::unique_ptr<root>&& other)
 {

@@ -6,12 +6,12 @@
 
 #include <parser/parse_node.hpp>
 
-namespace ratl::arithmetic
+namespace gpt::arithmetic
 {
-    class minus : public ratl::parse_node<int, void>
+    class minus : public gpt::parse_node<int, void>
     {
         private:
-            using node = ratl::parse_node<int, void>;
+            using node = gpt::parse_node<int, void>;
 
         private:
             std::string to_string_() override
@@ -34,6 +34,6 @@ namespace ratl::arithmetic
                 return children[0]->compute() - children[1]->compute();
             }
     };
-}// namespace ratl::arithmetic
+}// namespace gpt::arithmetic
 
 #endif// PARSER_PREBUILT_ARITHMETIC_MINUS_HPP

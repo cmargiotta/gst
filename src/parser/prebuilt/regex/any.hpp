@@ -5,12 +5,12 @@
 
 #include <parser/parse_node.hpp>
 
-namespace ratl::regex
+namespace gpt::regex
 {
-    class any : public ratl::parse_node<bool>
+    class any : public gpt::parse_node<bool>
     {
         private:
-            using node = ratl::parse_node<bool>;
+            using node = gpt::parse_node<bool>;
 
         public:
             static const inline std::string identifier = ".";
@@ -34,6 +34,6 @@ namespace ratl::regex
                 return (to_match != '\r' && to_match != '\n');
             }
     };
-}// namespace ratl::regex
+}// namespace gpt::regex
 
 #endif// PARSER_PREBUILT_REGEX_ANY_HPP

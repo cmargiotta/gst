@@ -10,15 +10,14 @@
 #include <parser/prebuilt/math_function/base_node.hpp>
 #include <parser/prebuilt/math_function/exceptions.hpp>
 
-namespace ratl::math_function
+namespace gpt::math_function
 {
-    class base_node
-        : public ratl::parse_node<ratl::math::fraction<int>,
-                                  std::unordered_map<std::string, ratl::math::fraction<int>>>
+    class base_node : public gpt::parse_node<gpt::math::fraction<int>,
+                                             std::unordered_map<std::string, gpt::math::fraction<int>>>
     {
         public:
-            using node = ratl::parse_node<ratl::math::fraction<int>,
-                                          std::unordered_map<std::string, ratl::math::fraction<int>>>;
+            using node = gpt::parse_node<gpt::math::fraction<int>,
+                                         std::unordered_map<std::string, gpt::math::fraction<int>>>;
 
         public:
             base_node(const std::string& id_,
@@ -30,12 +29,12 @@ namespace ratl::math_function
 
             ~base_node() override = default;
 
-            ratl::math::fraction<int> simplify()
+            gpt::math::fraction<int> simplify()
             {
                 try
                 {
-                    std::unordered_map<std::string, ratl::math::fraction<int>> arg;
-                    ratl::math::fraction<int>                                  value = compute(arg);
+                    std::unordered_map<std::string, gpt::math::fraction<int>> arg;
+                    gpt::math::fraction<int>                                  value = compute(arg);
 
                     return value;
                 }
@@ -45,6 +44,6 @@ namespace ratl::math_function
                 }
             }
     };
-}// namespace ratl::math_function
+}// namespace gpt::math_function
 
 #endif// PARSER_PREBUILT_MATH_FUNCTION_BASE_MATH_NODE_HPP

@@ -3,11 +3,11 @@
 
 #include <stdexcept>
 
-namespace ratl::math_function
+namespace gpt::math_function
 {
     class not_simplifiable
     {
     };
-}// namespace ratl::math_function
+}// namespace gpt::math_function
 
 #endif// PARSER_PREBUILT_MATH_FUNCTION_EXECPTIONS_HPP

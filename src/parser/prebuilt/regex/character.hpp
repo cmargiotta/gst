@@ -6,12 +6,12 @@
 
 #include <parser/parse_node.hpp>
 
-namespace ratl::regex
+namespace gpt::regex
 {
-    class character : public ratl::parse_node<bool>
+    class character : public gpt::parse_node<bool>
     {
         private:
-            using node = ratl::parse_node<bool>;
+            using node = gpt::parse_node<bool>;
 
             std::string matched;
 
@@ -52,6 +52,6 @@ namespace ratl::regex
                 return false;
             }
     };
-}// namespace ratl::regex
+}// namespace gpt::regex
 
 #endif// PARSER_PREBUILT_REGEX_CHARACTER_HPP

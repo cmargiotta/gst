@@ -6,12 +6,12 @@
 
 #include <parser/parse_node.hpp>
 
-namespace ratl::arithmetic
+namespace gpt::arithmetic
 {
-    class par_open : public ratl::parse_node<int, void>
+    class par_open : public gpt::parse_node<int, void>
     {
         private:
-            using node = ratl::parse_node<int, void>;
+            using node = gpt::parse_node<int, void>;
 
         private:
             std::string to_string_() override
@@ -42,6 +42,6 @@ namespace ratl::arithmetic
                 return result;
             }
     };
-}// namespace ratl::arithmetic
+}// namespace gpt::arithmetic
 
 #endif// PARSER_PREBUILT_ARITHMETIC_PAR_OPEN_HPP

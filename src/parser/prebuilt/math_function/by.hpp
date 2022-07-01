@@ -9,7 +9,7 @@
 #include <parser/prebuilt/math_function/number.hpp>
 #include <parser/prebuilt/math_function/unknown.hpp>
 
-namespace ratl::math_function
+namespace gpt::math_function
 {
     class by : public base_node
     {
@@ -22,7 +22,7 @@ namespace ratl::math_function
                 return "*";
             }
 
-            ratl::math::fraction<int> pre_computed_result;
+            gpt::math::fraction<int> pre_computed_result;
 
         public:
             static const inline std::string identifier     = "\\*";
@@ -35,10 +35,10 @@ namespace ratl::math_function
             {
             }
 
-            inline ratl::math::fraction<int>
-                compute(std::unordered_map<std::string, ratl::math::fraction<int>>& input) override
+            inline gpt::math::fraction<int>
+                compute(std::unordered_map<std::string, gpt::math::fraction<int>>& input) override
             {
-                ratl::math::fraction<int> result = pre_computed_result;
+                gpt::math::fraction<int> result = pre_computed_result;
 
                 for (auto& child: children)
                 {
@@ -127,6 +127,6 @@ namespace ratl::math_function
                 return ss.str();
             }
     };
-}// namespace ratl::math_function
+}// namespace gpt::math_function
 
 #endif// PARSER_PREBUILT_MATH_FUNCTION_BY_HPP

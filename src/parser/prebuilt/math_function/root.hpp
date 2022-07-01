@@ -8,7 +8,7 @@
 #include <parser/prebuilt/math_function/by.hpp>
 #include <parser/prebuilt/math_function/exceptions.hpp>
 
-namespace ratl::math_function
+namespace gpt::math_function
 {
     class root : public base_node
     {
@@ -20,8 +20,8 @@ namespace ratl::math_function
             {
             }
 
-            inline ratl::math::fraction<int>
-                compute(std::unordered_map<std::string, ratl::math::fraction<int>>& input) override
+            inline gpt::math::fraction<int>
+                compute(std::unordered_map<std::string, gpt::math::fraction<int>>& input) override
             {
                 return children[0]->compute(input);
             }
@@ -38,6 +38,6 @@ namespace ratl::math_function
                 children[0]->add_child(std::move(child));
             }
     };
-}// namespace ratl::math_function
+}// namespace gpt::math_function
 
 #endif// PARSER_PREBUILT_MATH_FUNCTION_ROOT_HPP

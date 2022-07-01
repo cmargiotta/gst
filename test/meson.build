@@ -4,14 +4,14 @@ parse_tree_test = executable(
 	'parse_tree_test', 
 	'parse_tree.cpp', 
 	link_with: [test_main], 
-	dependencies: [ratl, catch2]
+	dependencies: [gpt, catch2]
 )
 
 math_test = executable(
 	'math_test', 
 	'math.cpp', 
 	link_with: [test_main], 
-	dependencies: [ratl, catch2]
+	dependencies: [gpt, catch2]
 )
 
 test('Parse tree test', parse_tree_test)

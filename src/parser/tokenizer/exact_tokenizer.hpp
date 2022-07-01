@@ -10,7 +10,7 @@
 #include <unordered_map>
 #include <vector>
 
-namespace ratl::tokenizer
+namespace gpt::tokenizer
 {
     /**
      * @brief Supported identifiers: comma separated list of values
@@ -71,6 +71,6 @@ namespace ratl::tokenizer
                 return result;
             }
     };
-}// namespace ratl::tokenizer
+}// namespace gpt::tokenizer
 
 #endif// PARSE_TREE_TOKENIZERS_exact_string_tokenizer_HPP

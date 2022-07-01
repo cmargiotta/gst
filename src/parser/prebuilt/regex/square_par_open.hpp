@@ -5,12 +5,12 @@
 
 #include <parser/parse_node.hpp>
 
-namespace ratl::regex
+namespace gpt::regex
 {
-    class square_par_open : public ratl::parse_node<bool>
+    class square_par_open : public gpt::parse_node<bool>
     {
         private:
-            using node = ratl::parse_node<bool>;
+            using node = gpt::parse_node<bool>;
 
         public:
             static const inline std::string identifier = "[";
@@ -55,6 +55,6 @@ namespace ratl::regex
                 return result;
             }
     };
-}// namespace ratl::regex
+}// namespace gpt::regex
 
 #endif// PARSER_PREBUILT_REGEX_SQUARE_PAR_OPEN_HPP

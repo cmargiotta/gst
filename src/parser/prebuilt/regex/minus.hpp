@@ -5,12 +5,12 @@
 
 #include <parser/parse_node.hpp>
 
-namespace ratl::regex
+namespace gpt::regex
 {
-    class minus : public ratl::parse_node<bool>
+    class minus : public gpt::parse_node<bool>
     {
         private:
-            using node = ratl::parse_node<bool>;
+            using node = gpt::parse_node<bool>;
 
         public:
             static const inline std::string identifier     = "-";
@@ -33,6 +33,6 @@ namespace ratl::regex
                 return (to_match >= range_l && to_match <= range_h);
             }
     };
-}// namespace ratl::regex
+}// namespace gpt::regex
 
 #endif// PARSER_PREBUILT_REGEX_MINUS_HPP

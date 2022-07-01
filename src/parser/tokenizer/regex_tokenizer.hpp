@@ -13,7 +13,7 @@
 
 #include <parser/regex.hpp>
 
-namespace ratl::tokenizer
+namespace gpt::tokenizer
 {
     /**
      * @brief Supported identifiers: comma separated list of values
@@ -21,8 +21,8 @@ namespace ratl::tokenizer
     class regex_tokenizer
     {
         private:
-            std::unordered_map<std::string, ratl::regex_tree> matchers;
-            std::unordered_map<std::string, std::string>      exact_matchers;
+            std::unordered_map<std::string, gpt::regex_tree> matchers;
+            std::unordered_map<std::string, std::string>     exact_matchers;
 
         public:
             using ParsedType = std::string;
@@ -30,7 +30,7 @@ namespace ratl::tokenizer
         public:
             regex_tokenizer(std::initializer_list<std::string> ids)
             {
-                ratl::regex_parser parser;
+                gpt::regex_parser parser;
                 for (const auto& id: ids)
                 {
                     auto matcher = parser(id);
@@ -119,6 +119,6 @@ namespace ratl::tokenizer
                 return result;
             }
     };
-}// namespace ratl::tokenizer
+}// namespace gpt::tokenizer
 
 #endif// PARSER_TOKENIZER_REGEX_TOKENIZER_HPP

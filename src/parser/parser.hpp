@@ -13,7 +13,7 @@
 
 #include <parser/parse_node.hpp>
 
-namespace ratl
+namespace gpt
 {
     template<class Tokenizer, class Root, class... Nodes_>
     class parser
@@ -221,6 +221,6 @@ namespace ratl
         : public parser<Tokenizer, Root, Nodes..., Nodes1...>
     {
     };
-}// namespace ratl
+}// namespace gpt
 
 #endif// PARSE_TREE_PARSER_HPP

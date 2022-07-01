@@ -5,12 +5,12 @@
 
 #include <parser/parse_node.hpp>
 
-namespace ratl::regex
+namespace gpt::regex
 {
-    class alphanumeric_latin : public ratl::parse_node<bool>
+    class alphanumeric_latin : public gpt::parse_node<bool>
     {
         private:
-            using node = ratl::parse_node<bool>;
+            using node = gpt::parse_node<bool>;
 
         public:
             static const inline std::string identifier = "\\w";
@@ -35,6 +35,6 @@ namespace ratl::regex
                        || (to_match >= '0' && to_match <= '9');
             }
     };
-}// namespace ratl::regex
+}// namespace gpt::regex
 
 #endif// PARSER_PREBUILT_REGEX_ALPHANUMERIC_LATIN_HPP

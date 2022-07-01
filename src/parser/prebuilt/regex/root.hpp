@@ -5,12 +5,12 @@
 
 #include <parser/parse_node.hpp>
 
-namespace ratl::regex
+namespace gpt::regex
 {
-    class root : public ratl::parse_node<bool>
+    class root : public gpt::parse_node<bool>
     {
         private:
-            using node = ratl::parse_node<bool>;
+            using node = gpt::parse_node<bool>;
 
         public:
             root(): node("", node::type::ROOT, node::operands_order::ROOT)
@@ -50,6 +50,6 @@ namespace ratl::regex
 
             void merge(std::unique_ptr<root>&& other);
     };
-}// namespace ratl::regex
+}// namespace gpt::regex
 
 #endif// PARSER_PREBUILT_REGEX_ROOT_HPP

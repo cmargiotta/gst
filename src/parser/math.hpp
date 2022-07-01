@@ -15,7 +15,7 @@
 #include <parser/prebuilt/arithmetic/root.hpp>
 #include <parser/tokenizer/regex_tokenizer.hpp>
 
-namespace ratl
+namespace gpt
 {
     using math_parser = parser<tokenizer::regex_tokenizer,
                                arithmetic::root,
@@ -29,6 +29,6 @@ namespace ratl
                                arithmetic::par_open>;
 
     using math_tree = decltype(std::declval<math_parser>()(std::declval<std::string>()));
-}// namespace ratl
+}// namespace gpt
 
 #endif// PARSER_MATH_HPP

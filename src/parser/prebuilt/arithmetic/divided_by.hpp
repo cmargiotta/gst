@@ -6,12 +6,12 @@
 
 #include <parser/parse_node.hpp>
 
-namespace ratl::arithmetic
+namespace gpt::arithmetic
 {
-    class divided_by : public ratl::parse_node<int, void>
+    class divided_by : public gpt::parse_node<int, void>
     {
         private:
-            using node = ratl::parse_node<int, void>;
+            using node = gpt::parse_node<int, void>;
 
         public:
             static const inline std::string identifier     = "/";
@@ -28,6 +28,6 @@ namespace ratl::arithmetic
                 return children[0]->compute() / children[1]->compute();
             }
     };
-}// namespace ratl::arithmetic
+}// namespace gpt::arithmetic
 
 #endif// PARSER_PREBUILT_ARITHMETIC_DIVIDED_BY_HPP
