@@ -1,8 +1,4 @@
-project('gpt', 'cpp', default_options: ['cpp_std=c++20'])
-
-if get_option('buildtype') == 'debug'
-  add_project_arguments('-O0', '-g3',  language : 'cpp')
-endif
+project('gpt', 'cpp', default_options: ['warning_level=3', 'cpp_args=-std=c++2b'])
 
 add_project_link_arguments(['-lstdc++fs'], language: 'cpp')
 

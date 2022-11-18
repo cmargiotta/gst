@@ -32,7 +32,7 @@
             [
               meson
               ninja
-              clang
+              gcc12
             ];
         };
       });
